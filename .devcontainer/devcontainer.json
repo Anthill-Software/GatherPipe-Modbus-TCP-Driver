@@ -1,0 +1,17 @@
+{
+  "name": "Go Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.Go",
+        "pnicotera.vscode-sqlite",
+        "EditorConfig.EditorConfig"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "go clean -modcache && go mod tidy"
+}
