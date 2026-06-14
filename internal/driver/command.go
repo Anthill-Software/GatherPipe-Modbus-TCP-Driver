@@ -17,22 +17,22 @@ func (driver *ModbusTCPDriver) SupportedCommands() ([]GatherPipe.CommandArg, err
 		},
 		{
 			Name:        "set-endpoint",
-			Usage:       "setEndpoint [host:port]",
+			Usage:       "set-endpoint [host:port]",
 			Description: "Met à jour l'adresse IP et le port du serveur Modbus (ex: 192.168.1.10:502)",
 		},
 		{
 			Name:        "list-metrics",
-			Usage:       "ListMetrics",
+			Usage:       "list-metrics",
 			Description: "Liste toutes les métriques Modbus actuellement configurées",
 		},
 		{
 			Name:        "add-metric",
-			Usage:       "AddMetric [name] [register_type] [address] [data_type] [scale] [unit]",
-			Description: "Ajoute une nouvelle métrique (ex: AddMetric temp holding 0 int16 0.1 °C)",
+			Usage:       "add-metric [name] [register_type] [address] [data_type] [scale] [unit]",
+			Description: "Ajoute une nouvelle métrique (ex: add-metric temp holding 0 int16 0.1 °C)",
 		},
 		{
 			Name:        "del-metric",
-			Usage:       "DelMetric [name]",
+			Usage:       "del-metric [name]",
 			Description: "Supprime une métrique de la configuration par son nom",
 		},
 	}, nil
