@@ -5,8 +5,7 @@ before:
     - go mod tidy
 
 builds:
-  - id: gatherpipe-driver-dummy
-    binary: dummy-driver
+  - id: gatherpipe-driver-modbustcp
     main: ./cmd/driver/main.go
     env:
       - CGO_ENABLED=0
@@ -22,6 +21,6 @@ builds:
       - 6
 
 archives:
-  - name_template: "{{ .Binary }}-{{ .Os }}-{{ .Arch }}{{ .Arm }}"
+  - name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}{{ .Arm }}"
     formats:
       - binary
